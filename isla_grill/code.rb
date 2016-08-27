@@ -1,10 +1,7 @@
-#interesting
+#food cost
+dinner_total = 178
+tip = 20
 
-while count >3
-  if 1 < 2
-    puts "Hello there!"
-  else
-  end
-end
-
-#cool yo
+#output
+printf("You should tip %.2f.\n", dinner_total * tip.to_f/100)
+printf("The total bill is %.2f.\n", dinner_total * (1 + tip.to_f/100))
