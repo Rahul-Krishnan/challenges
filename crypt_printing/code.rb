@@ -12,9 +12,6 @@ extra = ["Container of beer", "Lionel model train set", "Ingraham pocket watch"]
 
 crypt_of_civilization = crypt_of_civilization + extra
 
-puts crypt_of_civilization
-puts ""
-
 puts crypt_of_civilization.length
 puts crypt_of_civilization.first
 puts crypt_of_civilization.last
@@ -22,3 +19,22 @@ puts crypt_of_civilization[1]
 puts crypt_of_civilization[2]
 puts crypt_of_civilization[-2]
 puts crypt_of_civilization.index("Toast-O-Lator")
+
+puts crypt_of_civilization.include?("container of beer")
+puts crypt_of_civilization.include?("Toast-O-Lator")
+puts crypt_of_civilization.include?("plastic bird")
+
+puts ""
+
+i = 0
+while i < crypt_of_civilization.length
+  puts crypt_of_civilization[i]
+  i +=1
+end
+
+puts ""
+
+i = 0
+crypt_of_civilization.each do |i|
+  puts i
+end

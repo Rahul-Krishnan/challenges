@@ -22,3 +22,7 @@ puts crypt_of_civilization[1]
 puts crypt_of_civilization[2]
 puts crypt_of_civilization[-2]
 puts crypt_of_civilization.index("Toast-O-Lator")
+
+puts crypt_of_civilization.include?("container of beer")
+puts crypt_of_civilization.include?("Toast-O-Lator")
+puts crypt_of_civilization.include?("plastic bird")
