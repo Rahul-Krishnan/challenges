@@ -1,3 +1,4 @@
+#clubs and distances
 distances = {
   driver: 200,
   three_wood: 180,
@@ -15,13 +16,16 @@ distances = {
   putter: 0
 }
 
+#Ask for user input
+puts "How far from the hole are you?"
+print " >"
+hole_distance = gets.chomp.to_f
 
-puts "How far away are you?"
-current_distance = gets.chomp.to_i
-
-distances.each do |club, distance|
-  if distance <= current_distance
-    puts "Use the #{club.to_s.gsub("_", " ")}!"
+#Present suggestion
+print "You should try the "
+distances.each do |club, dist|
+  if hole_distance >= dist
+    puts club.to_s.tr("_", " ")
     break
   end
 end
