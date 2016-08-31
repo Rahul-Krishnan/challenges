@@ -29,7 +29,13 @@ game_scores.each do |par_score|
 end
 
 #Performance Calc
-performance = par_sum - total
-  
+performance = total - par_sum
+
 #Output
-puts "Hi there, your score was #{total}, which is #{performance} under par."
+if performance > 0
+  puts "Hi there, your score was #{total}, which is #{performance} over par."
+elsif performance < 0
+  puts "Hi there, your score was #{total}, which is #{-performance} under par"
+else
+  puts "Hi there, your score was #{total}, which is par for the course"
+end
