@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+  font-size: 18px;
+  color: white;
+  background-color: #E5F3F4;
+}
+
+nav {
+  background-color: #3498DB;
+  font-family: "Alegreya";
+  padding: 20px;
+  padding-top: 10px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.site-title {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.sub-title {
+  margin: 5px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.quote {
+  background-color: #2ECC71;
+  color: black;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 700px;
+  margin: 20px auto;
+  border-width: 5px;
+  border-radius: 5px;
+  border-color: #27B061;
+  border-style: solid;
+  font-weight: bold;
+}
+
+.quoted-from {
+  font-style: italic;
+  text-align: right;
+}
+
+.try-it-now {
+  background-color: #E74C3C;
+  font-family: "Alegreya";
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+  width: 400px;
+  border-width: 5px;
+  border-radius: 30px;
+  border-color: #C0392B;
+  border-style: solid;
+  margin: 20px auto;
+  padding: 10px;
+}
+.try-it-now a {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.blue-page-section {
+  background-color: #2C3E50;
+  padding: 20px;
+}
+
+.content-wrapper {
+  background-color: #2C3E50;
+}
+
+footer {
+  background-color: #1C2224;
+  text-align: center;
+  color: #2F86BF;
+  font-size: 18px;
+  padding: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #2F86BF;
+  margin-left: 20px;
+  margin-right: 20px;
+}
