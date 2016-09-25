@@ -1,4 +1,5 @@
 body {
+  font-family: Arial;
   margin: 10px;
   background-color: #F6F6EF;
 }
@@ -6,19 +7,37 @@ body {
 header {
   background-color: #FF6600;
   text-align: center;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 900;
+  font-size: 16px;
 }
 
 .side-tag {
+  font-family: Rockwell;
+  font-weight: bold;
+  font-size: 20px;
   color: white;
   float: left;
-  margin: 0
+  margin: 0;
+  padding-left: 5px;
 }
 
 h1 {
+  font-size: 24px;
+  font-weight: 900;
+}
 
+h2 {
+  font-family: Rockwell;
+  font-size: 20px;
 }
 
 img {
-  height: 300px;
+  height: 150px;
+}
+
+li {
+  padding-left: 10px;
+  font-weight: 600;
 }
