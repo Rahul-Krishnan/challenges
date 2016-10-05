@@ -9,10 +9,9 @@ number = gets.chomp
 
 #check if user says 'tons', then print order output
 if !(number.index("tons").nil?)
-  n = 1
-  while n != 0 do
+  n = rand(1..14)
+  n.times do
     puts order.capitalize
-    n = rand(14)
   end
 elsif number.to_i.to_s == number
   number.to_i.times do
