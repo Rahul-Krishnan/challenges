@@ -51,3 +51,11 @@ all_shows = [
 ]
 
 #YOUR CODE GOES HERE
+print "1. "
+puts dramas.find_all {|show| show.include?("Llama")}
+print "\n2. "
+puts animations.find_all {|show| show.include?("Dog")}
+print "\n3. "
+puts comedies.reject {|show| show.include?("Cat")}
+print "\n4. "
+puts all_shows.map {|show| show[0]}

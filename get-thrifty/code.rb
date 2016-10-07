@@ -17,11 +17,7 @@ box_1 =
 "stone cross necklace", "loose knit tank top",
 "mock neck open back tank top", "sequin tank top", "red sweater"]
 
-if box_1.include?("denim shirt")
-  puts "true"
-else
-  puts "false"
-end
+ puts box_1.any?{|item| item == "denim shirt"}
 
 if box_1.include?("black nail polish")
   puts "\nThe box contains black nail polish.\n\n"
@@ -48,7 +44,6 @@ box_2 =
 "Irregular Choice Glitter Star Wars The Golden Droid C-3PO Flats",
 "Mint & White Color Block Emmie Saddle Shoes"]
 
-box_2.sort!
 box_2.each_with_index do |item, index|
   puts "#{index + 1}. #{item}"
 end
@@ -72,17 +67,5 @@ box_3 =
 "skinny jeans", "skinny jeans", "skinny jeans",
 "skinny jeans", "skinny jeans", "skinny jeans",
 "skinny jeans", "skinny jeans", "skinny jeans"]
-
-fake = 0
-box_3 each do |item|
-  if item == "skinny jeans"
-  else
-    fake++
-  end
-end
-
-if fake == 0
-  puts "true"
-else
-  puts "false"
-end
+puts
+puts box_3.all?{|item| item ==  "skinny jeans"}
