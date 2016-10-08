@@ -35,7 +35,5 @@ end
 
 puts ""
 required_clubs.each do |item|
-  unless possible_club_selections.include?(item)
-    puts "*** WARNING! You're missing a #{item.to_s.tr("_", " ")} ***"
-  end
+  puts "*** WARNING! You're missing a #{item.to_s.tr("_", " ")} ***" unless possible_club_selections.include?(item)
 end
