@@ -77,14 +77,14 @@ puts
 
 sum = 0
 array.each do |number|
-  sum +=  number if number % 2 != 0
+  sum +=  number if number.odd?
 end
 puts "Sum of all odd numbers: #{sum}"
 puts
 
 sum = 0
 array.each do |number|
-  sum +=  number if number % 5 == 0
+  sum +=  number if (number % 5).zero?
 end
 puts "Sum of all multiples of 5: #{sum}"
 puts
@@ -116,7 +116,7 @@ puts
 
 count = 0
 array.each do |name|
-  count +=  name.length
+  count += name.length
 end
 puts "Total number of characters: #{count}"
 puts
@@ -163,32 +163,37 @@ best_records = {
 # * How would you delete a key-value pair if the artist's name ends in a vowel?
 
 puts 'Artist names:'
-best_records.each do |name, _|
+best_records.each do |name, _album|
   puts name
 end
 puts
 
 puts 'Album names:'
-best_records.each do |_, album|
+best_records.each do |_name, album|
   puts album
 end
 puts
 
 lengths = []
-best_records.each do |name, _|
+best_records.each do |name, _album|
   lengths << name.length
 end
 
-puts "Longest artist name: #{best_records.keys[lengths.index(lengths.max)]}"
+longest = lengths.each_index.select { |n| lengths[n] == lengths.max }
+
+puts 'Longest artist name:'
+longest.each do |index|
+  puts best_records.keys[index]
+end
 puts
 
-best_records.each do |name, _|
+best_records.each do |name, _album|
   best_records[name] = 'Greatest Hits'
 end
 puts best_records
 puts
 
-best_records.delete_if { |name, _| ['a', 'e', 'i', 'o', 'u'].include?(name[name.length - 1]) }
+best_records.delete_if { |name, _album| ['a', 'e', 'i', 'o', 'u'].include?(name[name.length - 1]) }
 puts best_records
 puts
 
@@ -215,12 +220,12 @@ puts
 
 puts 'Odd numbered age entries:'
 ages.each do |name, age|
-  puts name if age % 2 != 0
+  puts name if age.odd?
 end
 puts
 
 puts 'Delete people under the age of 25:'
-ages.delete_if {|name, age| age < 25}
+ages.delete_if { |_name, age| age < 25 }
 puts ages
 puts
 
@@ -280,7 +285,7 @@ people =
 # * How would you convert all the phone numbers to the same standard (pick one)?
 
 puts 'Names:'
-people.each do |name, details|
+people.each do |name, _details|
   puts name
 end
 puts
@@ -292,22 +297,23 @@ end
 puts
 
 puts 'Children:'
-people.each do |name, details|
-  details['children'].each {|child| puts child} unless details['children'].nil?
+people.each do |_name, details|
+  details['children'].each { |child| puts child } unless details['children'].nil?
 end
 puts
 
 puts 'Companies:'
-people.each do |name, details|
+people.each do |_name, details|
   puts details['company'] unless details['company'].nil?
 end
 puts
-require 'pry'
+
 puts 'Reformatted Phone Numbers:'
-people.each do |name, details|
-  details['phone'].gsub! /\W/, ''
+people.each do |_name, details|
+  details['phone'].gsub!(/\W/, '')
   details['phone'].slice!(0) if details['phone'][0] == '1'
-  details['phone'] = "#{details['phone'].chars[0..2].join}-#{details['phone'].chars[3..5].join}-#{details['phone'].chars[6..8].join}"
+  details['phone'] = "#{details['phone'].chars[0..2].join}"\
+  "-#{details['phone'].chars[3..5].join}-#{details['phone'].chars[6..8].join}"
   puts details['phone']
 end
 puts
@@ -381,7 +387,7 @@ people =
 
 puts 'Names:'
 people.each do |section|
-  section.each do |name, details|
+  section.each do |name, _details|
     puts name
   end
 end
@@ -389,8 +395,8 @@ puts
 
 puts 'Children:'
 people.each do |section|
-  section.each do |name, details|
-    details['children'].each {|child| puts child} unless details['children'].nil?
+  section.each do |_name, details|
+    details['children'].each { |child| puts child } unless details['children'].nil?
   end
 end
 puts
