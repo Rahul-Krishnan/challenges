@@ -20,27 +20,27 @@
 # #2.
 #
 # numbers.each do |phone_number|
-#   puts phone_number if ["617", "978", "351", "781", "339", "413"].include?(phone_number.to_s.chars.first(3).join)
+#   puts phone_number if ['617', '978', '351', '781', '339', '413'].include?(phone_number.to_s.chars.first(3).join)
 # end
 #
 # #3.
 # numbers.each do |number|
-#   puts number if number%2 !=0
+#   puts number if number.odd?
 # end
 #
 # #4.
 # ages.each do |name, age|
-#   puts "#{name} is #{age} years old."
+#   puts '#{name} is #{age} years old.'
 # end
 #
 # #5.
 # ages.each do |name, age|
-#   puts "#{name} is #{age} years old." if age > 10
+#   puts '#{name} is #{age} years old.' if age > 10
 # end
 #
 # #6.
 # ages.each do |name, age|
-#   puts "#{name} is #{age} years old." if age%2 == 0
+#   puts '#{name} is #{age} years old.' if age.even?
 # end
 
 
@@ -62,7 +62,7 @@ end
 puts "Sum of all numbers: #{sum}"
 puts
 
-puts "List of all numbers in array:"
+puts 'List of all numbers in array:'
 array.each do |number|
   puts number
 end
@@ -70,34 +70,34 @@ puts
 
 sum = 0
 array.each do |number|
-  sum += number if number%2 == 0
+  sum +=  number if number.even?
 end
 puts "Sum of all even numbers: #{sum}"
 puts
 
 sum = 0
 array.each do |number|
-  sum += number if number%2 != 0
+  sum +=  number if number % 2 != 0
 end
 puts "Sum of all odd numbers: #{sum}"
 puts
 
 sum = 0
 array.each do |number|
-  sum += number if number%5 == 0
+  sum +=  number if number % 5 == 0
 end
 puts "Sum of all multiples of 5: #{sum}"
 puts
 
 sum = 0
 array.each do |number|
-  sum += number*number
+  sum +=  number * number
 end
 puts "Sum of squares: #{sum}"
 puts
 
 
-array = ["joanie", "annamarie", "muriel", "drew", "reva", "belle", "amari", "aida", "kaylie", "monserrate", "jovan", "elian", "stuart", "maximo", "dennis", "zakary", "louvenia", "lew", "crawford", "caitlyn"]
+array = ['joanie', 'annamarie', 'muriel', 'drew', 'reva', 'belle', 'amari', 'aida', 'kaylie', 'monserrate', 'jovan', 'elian', 'stuart', 'maximo', 'dennis', 'zakary', 'louvenia', 'lew', 'crawford', 'caitlyn']
 
 # Write Ruby code to find out the answers to the following questions:
 
@@ -108,7 +108,7 @@ array = ["joanie", "annamarie", "muriel", "drew", "reva", "belle", "amari", "aid
 # * How many names in `array` are more than 5 characters long?
 # * How many names in `array` are exactly 5 characters in length?
 
-puts "Each name backwards:"
+puts 'Each name backwards:'
 array.each do |name|
   puts name.reverse
 end
@@ -116,42 +116,42 @@ puts
 
 count = 0
 array.each do |name|
-  count += name.length
+  count +=  name.length
 end
 puts "Total number of characters: #{count}"
 puts
 
 count = 0
 array.each do |name|
-  count +=1 if ["a", "e", "i", "o", "u"].include?(name[name.length-1])
+  count += 1 if ['a', 'e', 'i', 'o', 'u'].include?(name[name.length-1])
 end
 puts "Number of names ending in a vowel: #{count}"
 puts
 
 count = 0
 array.each do |name|
-  count +=1 if name.length > 5
+  count += 1 if name.length > 5
 end
 puts "Number of names more than 5 letters long: #{count}"
 puts
 
 count = 0
 array.each do |name|
-  count +=1 if name.length == 5
+  count += 1 if name.length == 5
 end
 puts "Number of names exactly 5 letters long: #{count}"
 puts
 
 
 best_records = {
- "Tupac"=>"All Eyez on Me",
- "Eminem"=>"The Marshall Mathers LP",
- "Wu-Tang Clan"=>"Enter the Wu-Tang (36 Chambers)",
- "Led Zeppelin"=>"Physical Graffiti",
- "Metallica"=>"The Black Album",
- "Pink Floyd"=>"The Dark Side of the Moon",
- "Pearl Jam"=>"Ten",
- "Nirvana"=>"Nevermind"
+ 'Tupac'=>'All Eyez on Me',
+ 'Eminem'=>'The Marshall Mathers LP',
+ 'Wu-Tang Clan'=>'Enter the Wu-Tang (36 Chambers)',
+ 'Led Zeppelin'=>'Physical Graffiti',
+ 'Metallica'=>'The Black Album',
+ 'Pink Floyd'=>'The Dark Side of the Moon',
+ 'Pearl Jam'=>'Ten',
+ 'Nirvana'=>'Nevermind'
  }
 
 #  Write Ruby code to find out the answers to the following questions:
@@ -162,38 +162,38 @@ best_records = {
 # * How would you change all the album titles for every artist to `Greatest Hits`?
 # * How would you delete a key-value pair if the artist's name ends in a vowel?
 
-puts "Artist names:"
-best_records.each do |name, album|
+puts 'Artist names:'
+best_records.each do |name, _|
   puts name
 end
 puts
 
-puts "Album names:"
-best_records.each do |name, album|
+puts 'Album names:'
+best_records.each do |_, album|
   puts album
 end
 puts
 
 lengths = []
-best_records.each do |name, album|
+best_records.each do |name, _|
   lengths << name.length
 end
-longest = lengths.index(lengths.max)
-puts "Longest artist name: #{best_records.keys[longest]}"
+
+puts "Longest artist name: #{best_records.keys[lengths.index(lengths.max)]}"
 puts
 
-best_records.each do |name, album|
-  best_records[name] = "Greatest Hits"
+best_records.each do |name, _|
+  best_records[name] = 'Greatest Hits'
 end
 puts best_records
 puts
 
-best_records.delete_if {|name, album| ["a", "e", "i", "o", "u"].include?(name[name.length-1])}
+best_records.delete_if { |name, _| ['a', 'e', 'i', 'o', 'u'].include?(name[name.length - 1]) }
 puts best_records
 puts
 
 
-ages = {"Arch"=>89, "Gretchen"=>93, "Simone"=>12, "Daija"=>96, "Alivia"=>22, "Serena"=>28, "Alek"=>3, "Lula"=>24, "Christian"=>62, "Darryl"=>47, "Otha"=>32, "Evalyn"=>44, "Lincoln"=>27, "Rebeca"=>99, "Beatrice"=>99, "Kelton"=>10, "Zachary"=>18, "Aurelie"=>91, "Dell"=>71, "Lisandro"=>22}
+ages = {'Arch'=>89, 'Gretchen'=>93, 'Simone'=>12, 'Daija'=>96, 'Alivia'=>22, 'Serena'=>28, 'Alek'=>3, 'Lula'=>24, 'Christian'=>62, 'Darryl'=>47, 'Otha'=>32, 'Evalyn'=>44, 'Lincoln'=>27, 'Rebeca'=>99, 'Beatrice'=>99, 'Kelton'=>10, 'Zachary'=>18, 'Aurelie'=>91, 'Dell'=>71, 'Lisandro'=>22}
 
 # Write Ruby code to find out the answers to the following questions:
 
@@ -203,28 +203,28 @@ ages = {"Arch"=>89, "Gretchen"=>93, "Simone"=>12, "Daija"=>96, "Alivia"=>22, "Se
 # * How would you delete everyone under 25 years of age?
 # * What is the name and age of everyone with a name greater than or equal to 5 characters?
 
-puts "Names:"
+puts 'Names:'
 puts ages.keys
 puts
 
-puts "Names and ages:"
+puts 'Names and ages:'
 ages.each do |name, age|
   puts "#{name} is #{age} years old."
 end
 puts
 
-puts "Odd numbered age entries:"
+puts 'Odd numbered age entries:'
 ages.each do |name, age|
-  puts name if age%2 != 0
+  puts name if age % 2 != 0
 end
 puts
 
-puts "Delete people under the age of 25:"
+puts 'Delete people under the age of 25:'
 ages.delete_if {|name, age| age < 25}
 puts ages
 puts
 
-puts "Names 5 letters or longer:"
+puts 'Names 5 letters or longer:'
 ages.each do |name, age|
   puts "#{name} is #{age} years old." unless name.length < 5
 end
@@ -232,42 +232,42 @@ puts
 
 people =
 {
-  "Alia O'Conner PhD" => {
-         "phone" => "538.741.1841",
-       "company" => "Leuschke-Stiedemann",
-      "children" => [
-          "Simone",
-          "Cindy",
-          "Jess"
+  'Alia O\'Conner PhD' => {
+         'phone' => '538.741.1841',
+       'company' => 'Leuschke-Stiedemann',
+      'children' => [
+          'Simone',
+          'Cindy',
+          'Jess'
       ]
   },
-           "Ike Haag" => {
-         "phone" => "(661) 663-8352",
-       "company" => "Carter Inc",
-      "children" => [
-          "Joe",
-          "Ofelia",
-          "Deron"
+           'Ike Haag' => {
+         'phone' => '(661) 663-8352',
+       'company' => 'Carter Inc',
+      'children' => [
+          'Joe',
+          'Ofelia',
+          'Deron'
       ]
   },
-       "Brian Heller" => {
-         "phone" => "1-288-601-5886",
-       "company" => "O'Conner Group",
-      "children" => [
-          "Renee"
+       'Brian Heller' => {
+         'phone' => '1-288-601-5886',
+       'company' => 'O\'Conner Group',
+      'children' => [
+          'Renee'
       ]
   },
-       "Maryse Johns" => {
-         "phone" => "218-571-8774",
-       "company" => "Kuhlman Group",
-      "children" => [
-          "Dominick",
-          "Tricia"
+       'Maryse Johns' => {
+         'phone' => '218-571-8774',
+       'company' => 'Kuhlman Group',
+      'children' => [
+          'Dominick',
+          'Tricia'
       ]
   },
-  "Dr. Adela DuBuque" => {
-        "phone" => "1-203-483-1226",
-      "company" => "Heidenreich, Nietzsche and Dickinson"
+  'Dr. Adela DuBuque' => {
+        'phone' => '1-203-483-1226',
+      'company' => 'Heidenreich, Nietzsche and Dickinson'
   }
 }
 
@@ -279,40 +279,36 @@ people =
 # * What are the names of all the companies that people work for?
 # * How would you convert all the phone numbers to the same standard (pick one)?
 
-puts "Names:"
+puts 'Names:'
 people.each do |name, details|
   puts name
 end
 puts
 
-puts "Names and Companies:"
+puts 'Names and Companies:'
 people.each do |name, details|
-  puts "#{name} works for #{details["company"]}"
+  puts "#{name} works for #{details['company']}"
 end
 puts
 
-puts "Children:"
+puts 'Children:'
 people.each do |name, details|
-  details["children"].each {|child| puts child} unless details["children"].nil?
+  details['children'].each {|child| puts child} unless details['children'].nil?
 end
 puts
 
-puts "Companies:"
+puts 'Companies:'
 people.each do |name, details|
-  puts details["company"] unless details["company"].nil?
+  puts details['company'] unless details['company'].nil?
 end
 puts
 require 'pry'
-puts "Reformatted Phone Numbers:"
+puts 'Reformatted Phone Numbers:'
 people.each do |name, details|
-  details["phone"].gsub! "-", ""
-  details["phone"].gsub! "(", ""
-  details["phone"].gsub! ")", ""
-  details["phone"].gsub! ".", ""
-  details["phone"].gsub! " ", ""
-  details["phone"].slice!(0) if details["phone"][0] == "1"
-  details["phone"] = details["phone"].chars[0..2].join + "-" + details["phone"].chars[3..5].join + "-" + details["phone"].chars[6..8].join
-  puts details["phone"]
+  details['phone'].gsub! /\W/, ''
+  details['phone'].slice!(0) if details['phone'][0] == '1'
+  details['phone'] = "#{details['phone'].chars[0..2].join}-#{details['phone'].chars[3..5].join}-#{details['phone'].chars[6..8].join}"
+  puts details['phone']
 end
 puts
 
@@ -320,56 +316,56 @@ puts
 people =
 [
     {
-          "Derek Wehner" => {
-               "phone" => "588-047-7782",
-             "company" => "Daniel-Carroll",
-            "children" => [
-                "Phoebe",
-                "Gretchen",
-                "Wiley"
+          'Derek Wehner' => {
+               'phone' => '588-047-7782',
+             'company' => 'Daniel-Carroll',
+            'children' => [
+                'Phoebe',
+                'Gretchen',
+                'Wiley'
             ]
         },
-           "Ali Koelpin" => {
-               "phone" => "1-127-057-0020",
-             "company" => "Rau, Rutherford and Lockman",
-            "children" => [
-                "Juwan"
+           'Ali Koelpin' => {
+               'phone' => '1-127-057-0020',
+             'company' => 'Rau, Rutherford and Lockman',
+            'children' => [
+                'Juwan'
             ]
         },
-        "Ervin Prohaska" => {
-               "phone" => "(393) 630-3354",
-             "company" => "Carter Inc",
-            "children" => [
-                "Virgil",
-                "Piper",
-                "Josianne"
+        'Ervin Prohaska' => {
+               'phone' => '(393) 630-3354',
+             'company' => 'Carter Inc',
+            'children' => [
+                'Virgil',
+                'Piper',
+                'Josianne'
             ]
         },
-          "Hellen Borer" => {
-              "phone" => "1-687-825-0947",
-            "company" => "Maggio, Ferry and Moen"
+          'Hellen Borer' => {
+              'phone' => '1-687-825-0947',
+            'company' => 'Maggio, Ferry and Moen'
         }
     },
     {
-        "Elinor Johnson" => {
-              "phone" => "819.911.5553",
-            "company" => "Pollich Group"
+        'Elinor Johnson' => {
+              'phone' => '819.911.5553',
+            'company' => 'Pollich Group'
         }
     },
     {
-        "Richmond Murray" => {
-               "phone" => "1-516-432-2364",
-             "company" => "Sporer and Sons",
-            "children" => [
-                "Kade",
-                "Sage"
+        'Richmond Murray' => {
+               'phone' => '1-516-432-2364',
+             'company' => 'Sporer and Sons',
+            'children' => [
+                'Kade',
+                'Sage'
             ]
         },
-            "Nakia Ferry" => {
-               "phone" => "134-079-2237",
-             "company" => "Hamill, O'Keefe and Lehner",
-            "children" => [
-                "Rollin"
+            'Nakia Ferry' => {
+               'phone' => '134-079-2237',
+             'company' => 'Hamill, O\'Keefe and Lehner',
+            'children' => [
+                'Rollin'
             ]
         }
     }
@@ -383,7 +379,7 @@ people =
 # * How would you create a new hash called `employers` that has a key of a name and a value of a company name in `people`?
 # * How would you create a new hash called `children_count` that has a key of a name and a value of the number of children a person has?
 
-puts "Names:"
+puts 'Names:'
 people.each do |section|
   section.each do |name, details|
     puts name
@@ -391,10 +387,10 @@ people.each do |section|
 end
 puts
 
-puts "Children:"
+puts 'Children:'
 people.each do |section|
   section.each do |name, details|
-    details["children"].each {|child| puts child} unless details["children"].nil?
+    details['children'].each {|child| puts child} unless details['children'].nil?
   end
 end
 puts
@@ -402,7 +398,7 @@ puts
 phone_numbers = {}
 people.each do |section|
   section.each do |name, details|
-    phone_numbers[name] = details["phone"]
+    phone_numbers[name] = details['phone']
   end
 end
 puts phone_numbers
@@ -411,7 +407,7 @@ puts
 employers = {}
 people.each do |section|
   section.each do |name, details|
-    employers[name] = details["company"]
+    employers[name] = details['company']
   end
 end
 puts employers
@@ -420,10 +416,10 @@ puts
 children_count = {}
 people.each do |section|
   section.each do |name, details|
-    if details["children"].nil?
+    if details['children'].nil?
       count = 0
     else
-      count = details["children"].size
+      count = details['children'].size
     end
     children_count[name] = count
   end
