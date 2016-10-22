@@ -32,10 +32,11 @@ end
 performance = total - par_sum
 
 #Output
+print "Hi there, your score is #{total}, which is "
 if performance > 0
-  puts "Hi there, your score was #{total}, which is #{performance} over par."
+  puts "#{performance} over par."
 elsif performance < 0
-  puts "Hi there, your score was #{total}, which is #{-performance} under par"
+  puts "#{-performance} under par."
 else
-  puts "Hi there, your score was #{total}, which is par for the course"
+  puts "par for the course."
 end

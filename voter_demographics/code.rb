@@ -13,16 +13,6 @@ voter_data = [
 ]
 
 #Instantiate variables
-avg_age = 0.0
-avg_income = 0.0
-avg_size = 0.0
-f_pct = 0.0
-m_pct = 0.0
-u_pct = 0.0
-college_pct = 0.0
-hs_pct = 0.0
-no_hs_pct = 0.0
-
 age_sum = 0.0
 income_sum = 0.0
 size_sum = 0.0
