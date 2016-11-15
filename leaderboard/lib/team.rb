@@ -1,6 +1,6 @@
 class Team
   # YOUR CODE GOES HERE
-  attr_reader :name, :rank, :wins, :losses
+  attr_accessor :name, :rank, :wins, :losses
 
   def initialize name
     @name = name
@@ -8,5 +8,5 @@ class Team
     @wins = 0
     @losses = 0
   end
-  
+
 end
