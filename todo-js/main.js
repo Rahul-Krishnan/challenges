@@ -3,11 +3,11 @@ let todo = ['Write some Javascript', 'Submit System Check', 'Take a break', 'Wat
 
 let listDiv = document.getElementById('todo-list');
 
-for (let i = 0; i < todo.length; i++) {
+todo.forEach((item) => {
   let itemDiv = document.createElement('li');
-  itemDiv.innerHTML = todo[i];
+  itemDiv.innerHTML = item;
   listDiv.appendChild(itemDiv);
-}
+});
 
 let inputTodoItem = document.getElementById('new-todo-item');
 
