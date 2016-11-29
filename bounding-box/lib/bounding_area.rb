@@ -1,5 +1,5 @@
 class BoundingArea
-  def initialize(boxes=[] )
+  def initialize(boxes=[])
     @boxes = boxes
   end
 
