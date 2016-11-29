@@ -1,0 +1,10 @@
+<h1>Teams in LACKP</h1>
+<ul>
+  <% @team_names.each do |team| %>
+    <li>
+      <a href="/teams/<%= team %>">
+        <%= team %>
+      </a>
+    </li>
+  <% end %>
+</ul>
