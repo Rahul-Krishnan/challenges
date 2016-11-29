@@ -63,15 +63,18 @@ recipe_template_full = <<-ERB
 Ingredients
 -----------
 <% recipe[:ingredients].each do |ingredient| %>
-<%= ingredient %><% end %>
+<%= ingredient -%>
+<% end %>
 
 Directions
-----------<% i = 0 %><% recipe[:directions].each do |direction| %>
+----------
+<% i = 0 -%><% recipe[:directions].each do |direction| -%>
   <% i +=1 %>
-  <%= i %>. <%= direction %><% end %>
+  <%= i %>. <%= direction %>
+<% end %>
 
 ERB
 
 puts "\n\nEmbedded Ruby Output:"
-erb_two = ERB.new(recipe_template_full)
+erb_two = ERB.new(recipe_template_full, nil, '-')
 puts erb_two.result
