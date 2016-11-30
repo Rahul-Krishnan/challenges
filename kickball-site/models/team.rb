@@ -10,4 +10,15 @@ class Team
     @roster = TeamData::ROLL_CALL[team_name].values
   end
 
+  def self.all
+    team_objects_all = []
+    TeamData::ROLL_CALL.each do |team|
+      team_objects_all << Team.new(team)
+    end
+    team_objects_all
+  end
+
+  def players
+  end
+
 end

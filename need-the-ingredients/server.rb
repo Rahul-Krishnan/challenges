@@ -9,8 +9,8 @@ get '/' do
 end
 
 post '/ingredients' do
-  ingredient = params['ingredient']
-
+  ingredient = params['ingredient_name']
+  #binding.pry
   File.open('ingredients.txt', 'a') do |file|
     file.puts(ingredient)
   end

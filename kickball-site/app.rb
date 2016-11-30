@@ -28,3 +28,7 @@ get "/teams/:team_name" do
   @player_names = TeamData::ROLL_CALL[@team_name.to_sym]
   erb :show
 end
+
+get "/positions" do
+  "hello world"
+end
