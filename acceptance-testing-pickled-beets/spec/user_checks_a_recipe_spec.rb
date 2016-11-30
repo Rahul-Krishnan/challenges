@@ -23,7 +23,7 @@ feature "User checks a recipe's deliciousness", %(
     fill_in 'Recipe Name', with: 'pickled beets'
     click_button 'Submit'
 
-    expect(page).to have_content("\"pickled beets\" is    delicious recipe!")
+    expect(page).to have_content("\"pickled beets\" is a delicious recipe!")
   end
 
   scenario "user submits a recipe name without 'pickled beets'" do
