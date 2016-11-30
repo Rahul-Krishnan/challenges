@@ -1,0 +1,21 @@
+<h1>
+  The Best News on the Web
+</h1>
+
+<ul>
+  <p>Learning is fun.</p>
+  <% @article_array.each do |article_data| %>
+    <ul>
+      <a href= <%= article_data[1] %> >
+        <%= article_data[0] %>
+      </a>
+    </ul>
+    <ul>
+      <%= article_data[2] %>
+    </ul>
+    <p> </p>
+  <% end %>
+</ul>
+
+<a href="/">Go Home</a>
+<a href="/articles/new">Add article</a>
