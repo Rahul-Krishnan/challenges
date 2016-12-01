@@ -28,5 +28,6 @@ end
 
 get '/dishes/random.json' do
   content_type :json
+  dishes.sample
   # serve up a random dish from the `dishes` array
 end
