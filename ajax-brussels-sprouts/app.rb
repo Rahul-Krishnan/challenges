@@ -31,6 +31,6 @@ end
 
 get '/dishes/random.json' do
   content_type :json
-  { dish: sample_dish }.to_json
+  { selection: sample_dish }.to_json
   # serve up a random dish from the `dishes` array
 end
