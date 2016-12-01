@@ -1,14 +1,17 @@
 $('#get-dish').on('click', function(event) {
   event.preventDefault();
-  $.get("/dishes/random.json", function(thing) {
-    alert("Your dish is " + thing.selection);
+
+  var request = $.ajax({
+    method: "GET",
+    url: "/dishes/random.json"
+  })
+
+  request.done(function(stuff) {
+    alert("Your dish is " + stuff.selection);
   });
-  // request a new dish and alert the user
+  // Shorthand JQuery get request:
+  // $.get("/dishes/random.json", function(thing) {
+  //   alert("Your dish is " + thing.selection);
+  //  });
 });
 //
-// var request = $.ajax({
-//   method: "GET",
-//   url: "/dishes/random.json"
-// })
-//
-// request.done(alert("Your dish is " + sample_dish.selection));
