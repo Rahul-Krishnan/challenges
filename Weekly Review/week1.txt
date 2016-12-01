@@ -1,0 +1,40 @@
+What have we learned?
+
+HTTP
+AJAX -> *not on test this week*
+Sinatra
+Acceptance/Integration Testing
+View Templating with erb
+HTML Focus
+
+
+Status Codes:
+200 s'all good
+300 redirect
+400 client problem
+500 server problem
+
+
+<% %> embedded ruby that does not display on page
+<%= %> embedded ruby that displays on page
+
+get "/items" do
+  @items = [
+  "ball",
+  "bat",
+  "glove"
+  ]
+end
+
+Sinatra = Ruby framework to run a server (deal with HTTP verbs)
+
+Test: Build Sinatra Web App, has test suite for support
+
+form action (eg "/items") and method (eg "post") should match path of route (eg "post /items do")
+  - have access to all params submitted in form
+  - can save to some file (eg write)
+
+
+Good assignments to review:
+- News Aggregator
+- Kickball Site

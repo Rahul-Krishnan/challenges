@@ -8,7 +8,6 @@ $('#get-dish').on('click', function(event) {
 
   request.done(function(stuff) {
     alert("Your dish is " + stuff.selection);
-  });
   // Shorthand JQuery get request:
   // $.get("/dishes/random.json", function(thing) {
   //   alert("Your dish is " + thing.selection);
