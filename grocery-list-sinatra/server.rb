@@ -32,7 +32,6 @@ post "/grocery-list" do
   end
 
   if @new_item == ""
-    erb :index
   else
     CSV.open('grocery_list.csv', 'a') do |csv_object|
       csv_object << [@new_item, @new_quantity]
