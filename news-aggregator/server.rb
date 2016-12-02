@@ -13,7 +13,14 @@ get '/' do
 end
 
 get '/articles' do
-  @
+  @article_array = []
+  CSV.foreach('article_data.csv') do |csv_obj|
+    article_data_array = []
+    csv_obj.each do |article_data|
+      article_data_array << article_data
+    end
+    @article
+
 end
 
 get'/articles/new' do
