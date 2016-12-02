@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Grocery Details</title>
+  </head>
+
+  <body>
+    <h1>
+      The item is <%= @item_name %>
+    </h1>
+
+    <h2>
+      You need to buy <%= @grocery_hash[@item_name] %>
+    </h2>
+
+    <a href="/grocery-list">All items</a>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+    <h1>Grocery list</h1>
+
+    <ul>
+      <% @grocery_hash.each do |item, quantity| %>
+        <li>
+          <a href="/grocery-list/<%= item %>">
+            <%= item %>
+          </a>
+          : <%= quantity %>
+        </li>
+      <% end %>
+    </ul>
+
+    <form action="/grocery-list" method="post">
+      <label for="Name">Add Item:</label>
+      <input type="text" id="Name", name="Name" required>
+
+      <label for="quantity">Quantity:</label>
+      <input type="text" id="quantity", name="quantity">
+
+      <input type="submit", value="Add">
+    </form>
+  </body>
+</html>
