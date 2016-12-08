@@ -44,7 +44,7 @@ captureThreeNumbers = (string) => {
 };
 
 matchesPattern = (string) => {
-  let regex = /\d{3}[-]\d{3}[-]\d{4}/;
+  let regex = /\b\d{3}[-]\d{3}[-]\d{4}\b/;
   let found = string.match(regex);
   if (found === null) {
     return false;
@@ -55,7 +55,7 @@ matchesPattern = (string) => {
 };
 
 isUSD = (string) => {
-  let regex = /\d/;
+  let regex = /^[$]\d+(,\d{3})*((\.\d{2})|())$/;
   let found = string.match(regex);
   if (found === null) {
     return false;
