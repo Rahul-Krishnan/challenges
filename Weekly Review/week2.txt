@@ -9,3 +9,7 @@ a()
   .then(e)
   .then(f)
   .catch(dealWithError)
+
+Fetch is built on promises
+
+*** MAKE SURE YOU CAN DO JS MARATHON AND JASMINE TESTING ***

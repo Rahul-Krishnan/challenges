@@ -58,7 +58,7 @@ launchpad = (ship, objectsArray, propulsionObject) => {
   setTimeout(function() {
     propulsionObject.addFuel(100);
     ship.takeoff();
-  }, 10000);
+  }, 11000);
 };
 
 launchpad(ourShip, crewObjectsArray, rocket);
