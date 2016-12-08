@@ -22,6 +22,22 @@ let crewObjectsArray = [];
 
 ourShip = new Spaceship('USS Enterprise');
 
+
+countdown = (highNumber) => {
+  let countdown = highNumber;
+  console.log(countdown);
+  var id = setInterval(function() {
+    if (countdown > 0) {
+      countdown --;
+      console.log(countdown);
+
+    } else {
+      clearInterval(id);
+    }
+  }, 1000);
+};
+
+
 trainCrew = (namesArray) => {
   for(let name of namesArray) {
     newMember = new CrewMember(name);
@@ -31,7 +47,6 @@ trainCrew = (namesArray) => {
 };
 
 trainCrew(crewNames);
-// console.log(crewObjectsArray);
 
 launchpad = (ship, objectsArray, propulsionObject) => {
   console.log(`Please prepare for launch. All unauthorized personnel must leave the launch area immediately!\n`);
@@ -39,8 +54,11 @@ launchpad = (ship, objectsArray, propulsionObject) => {
   ship.loadCrew(objectsArray);
   console.log(`\nLooks like ${ship.captain().name} is our Captain for the day...\n`);
   ship.mountPropulsion(propulsionObject);
-  rocket.addFuel(10);
-  ship.takeoff();
+  countdown(10);
+  setTimeout(function() {
+    propulsionObject.addFuel(100);
+    ship.takeoff();
+  }, 10000);
 };
 
 launchpad(ourShip, crewObjectsArray, rocket);

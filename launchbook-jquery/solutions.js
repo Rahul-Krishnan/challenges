@@ -4,7 +4,7 @@ let navbar = $('nav');
 // Exercise: Find the sidebar on the right by using it's id.
 let sidebar = $('#sidebar-right');
 // Exercise: Find the "Pages" and "Groups" sections of the sidebar by using their class.
-let pagesGroups = $('.pages','.groups');
+let pagesGroups = $('.pages', '.groups');
 // Exercise: Find all of the comments on the page.
 let comments = $('.media-body');
 // Exercise: Find the first comment on the page.
