@@ -1,12 +1,14 @@
 /* jshint esversion: 6 */
 // your code, here
 
-let skycons = new Skycons({"color": "blue"});
+let skycons = new Skycons({"color": "grey"});
 
 let currentSummary = '';
 let currentIcon = '';
+let currentTemp = '';
 
 fetch('https://api.darksky.net/forecast/303c63607957455081e0a054e6e9753b/42.35,-71.07')
+
   .then(response => {
     console.log('response', response);
     console.log('response.status:', response.status);
@@ -17,14 +19,27 @@ fetch('https://api.darksky.net/forecast/303c63607957455081e0a054e6e9753b/42.35,-
   .then(responseBody => {
     console.log('responseBody:', responseBody);
     let allWeather = JSON.parse(responseBody);
+
     let currentWeather = allWeather.currently;
-    currentSummary = currentWeather.summary;
+
+    currentSummary += currentWeather.summary;
     currentIcon += currentWeather.icon;
-    let paragraph = document.createElement('h2');
-    let text = document.createTextNode(currentSummary);
-    paragraph.appendChild(text);
+    currentTemp += currentWeather.temperature;
+
+    let summaryElement = document.createElement('h2');
+    let summaryText = document.createTextNode(currentSummary);
+
+    let tempElement = document.createElement('h2');
+    let tempText = document.createTextNode(currentTemp);
+
+    summaryElement.appendChild(summaryText);
+    tempElement.appendChild(tempText);
+
     let body = document.getElementsByTagName('body')[0];
-    body.appendChild(paragraph);
+
+    body.appendChild(summaryElement);
+    body.appendChild(tempElement);
+
     skycons.add(document.getElementById("icon1"), currentIcon);
   });
 
@@ -49,4 +64,4 @@ fetch('https://api.darksky.net/forecast/303c63607957455081e0a054e6e9753b/42.35,-
 // skycons.set("icon1", PARTLY_CLOUDY_NIGHT);
 
 // want to remove one altogether? no problem:
-  skycons.remove("icon2");
+// skycons.remove("icon2");

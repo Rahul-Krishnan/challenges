@@ -1,0 +1,11 @@
+What have we learned?
+
+Promises and callbacks
+
+a()
+  .then(b)
+  .then(c)
+  .then(d)
+  .then(e)
+  .then(f)
+  .catch(dealWithError)
