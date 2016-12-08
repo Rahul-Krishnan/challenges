@@ -1,5 +1,6 @@
 /* jshint esversion: 6 */
 ready().then(() => {
+  // your code, here
   return fetch('/images/logo.png');
 })
   .then(response => {
