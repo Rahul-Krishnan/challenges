@@ -28,11 +28,10 @@ fetch('https://api.darksky.net/forecast/303c63607957455081e0a054e6e9753b/42.35,-
 
     let summaryElement = document.createElement('h2');
     let summaryText = document.createTextNode(currentSummary);
+    summaryElement.appendChild(summaryText);
 
     let tempElement = document.createElement('h2');
     let tempText = document.createTextNode(currentTemp);
-
-    summaryElement.appendChild(summaryText);
     tempElement.appendChild(tempText);
 
     let body = document.getElementsByTagName('body')[0];
