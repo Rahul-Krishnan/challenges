@@ -47,9 +47,8 @@ end
 
 post '/groceries.json' do
   parsed_data = JSON.parse(request.body.read)
-  binding.pry
-  grocery_name = parsed_data["groceries"]["name"]
-  grocery_quantity = parsed_data["groceries"]["quantity"]
+  grocery_name = parsed_data["grocery"]["name"]
+  grocery_quantity = parsed_data["grocery"]["quantity"]
   if !grocery_name.empty?
     grocery = {
       name: grocery_name,

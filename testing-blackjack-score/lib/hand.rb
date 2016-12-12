@@ -17,7 +17,10 @@ class Hand
         total += card.chop.to_i
       end
     end
+    aces_check(total)
+  end
 
+  def aces_check(total)
     @cards.each do |card|
       if card.include?("A")
         if total > 10
@@ -29,6 +32,7 @@ class Hand
     end
     total
   end
+
 end
 
 deck = Deck.new

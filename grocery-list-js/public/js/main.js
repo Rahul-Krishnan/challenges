@@ -32,12 +32,12 @@ $(document).ready(() => {
   let thisQuantity = document.getElementById('grocery_quantity').value;
 
   let data = {
-    groceries: {
+    grocery: {
       name: thisName, quantity: thisQuantity
     }
   };
   let jsonStringData = JSON.stringify(data);
-  debugger;
+
   fetch('http://localhost:4567/groceries.json', {
     method: 'post',
     body: jsonStringData
