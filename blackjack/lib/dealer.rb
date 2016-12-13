@@ -3,13 +3,12 @@ require_relative "deck"
 require_relative "hand"
 
 
-class Dealer
+class Dealer < Player
   attr_reader :name
   attr_accessor :hand
 
   def initialize
     @name = 'Dealer'
-    @hand = []
   end
 
 end

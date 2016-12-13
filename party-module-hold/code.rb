@@ -1,8 +1,10 @@
 module PartyGoer
   #YOUR CODE GOES HERE
+  def initialize
+    @drink_count = 0
+  end
 
   def drink
-    @drink_count ||= 0
     @drink_count +=1
     if @drink_count >3
       return false

@@ -36,7 +36,7 @@ class Hand
   end
 
   def add_card(card_object)
-    @cards << card_object
+    @cards << card_object[0]
   end
 
 
