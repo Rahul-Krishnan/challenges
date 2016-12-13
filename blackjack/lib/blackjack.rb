@@ -5,7 +5,6 @@ require_relative "player"
 require_relative "dealer"
 require 'pry'
 
-##########################################
 
 def exit_game?
   system 'clear'
