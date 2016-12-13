@@ -21,9 +21,6 @@ module PartyGoer
     return true
   end
 
-  class PersonalizedHavocError < StandardError
-  end
-
   def cause_havoc
     raise PersonalizedHavocError, "You should define this yourself!"
   end
@@ -32,4 +29,7 @@ end
 class Launcher
   extend PartyGoer
   include PartyGoer
+end
+
+class PersonalizedHavocError < StandardError
 end
