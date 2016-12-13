@@ -22,9 +22,6 @@ module PartyGoer
   end
 
   class PersonalizedHavocError < StandardError
-    def message
-      "You should define this yourself!"
-    end
   end
 
   def cause_havoc
