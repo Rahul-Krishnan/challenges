@@ -31,4 +31,5 @@ end
 
 class Launcher
   extend PartyGoer
+  include PartyGoer
 end

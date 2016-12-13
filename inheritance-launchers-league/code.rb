@@ -19,15 +19,15 @@ class SuperHero
   end
 
   def powers
-    ""
+    "True Strength:"
   end
 
   def weakness
-    ""
+    "Greatest weakness:"
   end
 
   def backstory
-    ""
+    "The real backstory..."
   end
 
   def speed_in_mph
@@ -49,15 +49,15 @@ end
 class Speedster < SuperHero
 
   def backstory
-    "Inherited Speedy Gonzales' powers after eating his soul."
+    "#{super} Inherited Speedy Gonzales' powers after eating his soul."
   end
 
   def powers
-    "One-second Mile"
+    "#{super} One-second Mile"
   end
 
   def weakness
-    "Treacle and molasses"
+    "#{super} Treacle and molasses"
   end
 
   def speed_in_mph
@@ -69,15 +69,15 @@ end
 class Brawler < SuperHero
 
   def backstory
-    "He punched himself extremely hard."
+    "#{super} He punched himself extremely hard."
   end
 
   def powers
-    "Ultra Punch"
+    "#{super} Ultra Punch"
   end
 
   def weakness
-    "Harder punches"
+    "#{super} Harder punches"
   end
 
   def health
@@ -89,11 +89,11 @@ end
 class Detective < SuperHero
 
   def backstory
-    "He is a guy with a shady past."
+    "#{super} He is a guy with a shady past."
   end
 
   def powers
-    "Laser eye"
+    "#{super} Laser eye"
   end
 
   def weakness
@@ -109,15 +109,15 @@ end
 class Demigod < SuperHero
 
   def backstory
-    "He is obviously half a God."
+    "#{super} He is obviously half a God."
   end
 
   def powers
-    "Lightning Bolt"
+    "#{super} Lightning Bolt"
   end
 
   def weakness
-    "Demogorgon"
+    "#{super} Demogorgon"
   end
 
   def home
@@ -128,15 +128,15 @@ end
 
 class JackOfAllTrades < SuperHero
   def backstory
-    "A little bit of this, a little bit of that."
+    "#{super} A little bit of this, a little bit of that."
   end
 
   def powers
-    "Multi-pronged punch-kick"
+    "#{super} Multi-pronged punch-kick"
   end
 
   def weakness
-    "Kryptonite"
+    "#{super} Kryptonite"
   end
 
   def home
@@ -156,15 +156,15 @@ end
 class WaterBased < SuperHero
 
   def backstory
-    "He is obviously half a God."
+    "#{super} He is obviously half a God."
   end
 
   def powers
-    "Double Firehose"
+    "#{super} Double Firehose"
   end
 
   def weakness
-    "Land-based tactics"
+    "#{super} Land-based tactics"
   end
 
   def home
