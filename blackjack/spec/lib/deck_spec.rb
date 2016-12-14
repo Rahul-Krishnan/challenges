@@ -7,7 +7,7 @@ RSpec.describe Deck do
   let(:dealt_cards)  {deck.deal(2)}
   let (:sorted_deck) {deck.cards.sort_by{ |card| card.face}}
 
-  describe '#construct_deck' do
+  describe '.new' do
     it 'should have 52 cards' do
       expect(deck.cards.length).to eq 52
     end

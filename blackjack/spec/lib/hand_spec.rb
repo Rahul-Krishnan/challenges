@@ -18,7 +18,7 @@ RSpec.describe Hand do
                               Card.new("2", "♦"),
                               Card.new("5", "♦"),
                               Card.new("A", "♥")]) }
-  describe '#new_hand' do
+  describe '.new' do
     it "takes an array of card objects" do
       deck = Deck.new
       hand = Hand.new
@@ -51,7 +51,7 @@ RSpec.describe Hand do
 
   describe '#add_card' do
     it 'adds the card to hand' do
-      
+
     end
   end
 

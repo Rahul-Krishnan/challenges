@@ -6,7 +6,7 @@ RSpec.describe Card do
   # Your tests here
   let(:card) { Card.new('A', '♣') }
 
-  describe '#new_card' do
+  describe '.new' do
 
     it 'should contain a suit' do
       expect(card.suit).to eq('♣')
