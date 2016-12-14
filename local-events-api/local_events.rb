@@ -4,10 +4,13 @@ require 'open-uri'
 require 'httparty'
 require 'json'
 
-state_entry = ARGV[0]
-states = ["MA", ARGV[0]]
-  states.each do |state|
+puts "UPCOMING EVENTS IN SELECTED STATES:"
+puts "*"*35
+state_entries = ARGV
+# binding.pry
+state_entries.each do |state|
   puts "\n\nUpcoming #{state} events:"
+  puts "*"*20
   body = JSON.parse(HTTParty.get("https://api.seatgeek.com/2/events?venue.state=#{state}&client_id=NjQyNjQ2NnwxNDgxNzQ4MTkx").body)
 
   events = body["events"]
