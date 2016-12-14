@@ -24,27 +24,15 @@ class UserAccountValidator
     end
 
     def email_missing?
-      if @email==""
-        true
-      else
-        false
-      end
+      @email=="" || @email.nil?
     end
 
     def username_missing?
-      if @username==""
-        true
-      else
-        false
-      end
+      @username==""
     end
 
     def atsymbol_missing?
-      if (@email.nil? || !@email.include?("@"))
-        true
-      else
-        false
-      end
+      !@email.include?("@")
     end
 
     missing_bits
