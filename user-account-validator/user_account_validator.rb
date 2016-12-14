@@ -19,7 +19,7 @@ class UserAccountValidator
       elsif email_missing?
         raise EmailMissingError
       elsif atsymbol_missing?
-        raise "You are missing email symbols!"
+        raise "You are missing an @ symbol!"
       end
     end
 
