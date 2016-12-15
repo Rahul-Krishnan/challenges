@@ -1,0 +1,10 @@
+<div class="small-6 small-offset-3 columns">
+
+  <div class="callout primary">
+    <h3>Current Weather for <%= @geolocation.city %>, <%= @geolocation.state_abbreviation %>:</h3>
+    <p>
+      <%= @weather.temp_string %>,
+      <%= @weather.conditions %>
+    </p>
+  </div>
+</div>

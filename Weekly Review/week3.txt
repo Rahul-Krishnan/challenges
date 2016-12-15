@@ -1,0 +1,40 @@
+What have we learned?
+
+Ruby classes
+-initialize
+-def initialize method
+-can take arguments
+-instance variables out of arguments
+-methods
+
+Inheritance
+-classes can inherit from other classes
+-overwrite: if we define a method in a child class, it overwrites the parent class
+-can call super in a child class to refer to parent class property
+
+Modules
+-can include or extend
+  include: instance methods
+  extend: class methods
+
+Exceptions
+-can raise a custom error class that inherits from StandardError class
+-can catch them and bypass them
+-rescue
+
+TDD
+-Build tests first
+-Red, Green, Refactor
+
+APIs
+-Application Programming Interfaces
+-Key Authentication (DO NOT push to github)
+-Gems like HTTParty to make calls
+-Responses--JSON, XML, SOAP
+-Parse JSON, manipulate data
+-Look at the documentation
+
+ARGV
+-Allows you to store command line arguments as an array
+
+*** MAKE SURE YOU CAN DO OOP MARATHON, RSPEC TESTING, TDD, APIs ***
