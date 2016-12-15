@@ -7,7 +7,7 @@ require 'json'
 puts "UPCOMING EVENTS IN SELECTED STATES:"
 puts "*"*35
 state_entries = ARGV
-# binding.pry
+
 state_entries.each do |state|
   puts "\n\nUpcoming #{state.upcase} events:"
   puts "*"*20
@@ -19,5 +19,3 @@ state_entries.each do |state|
     print "#{event_hash["title"]} - @ #{event_hash["venue"]["name"]}\n"
   end
 end
-
-# binding.pry
