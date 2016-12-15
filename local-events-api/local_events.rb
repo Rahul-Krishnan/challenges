@@ -9,7 +9,7 @@ puts "*"*35
 state_entries = ARGV
 # binding.pry
 state_entries.each do |state|
-  puts "\n\nUpcoming #{state} events:"
+  puts "\n\nUpcoming #{state.upcase} events:"
   puts "*"*20
   body = JSON.parse(HTTParty.get("https://api.seatgeek.com/2/events?venue.state=#{state}&client_id=NjQyNjQ2NnwxNDgxNzQ4MTkx").body)
 
