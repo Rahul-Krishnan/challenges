@@ -14,7 +14,7 @@ class News
 
   private
   def uri
-    URI("http://api.nytimes.com/svc/topstories/v1/technology.json?api-key=#{@key}")
+    URI("http://api.nytimes.com/svc/topstories/v1/world.json?api-key=#{@key}")
   end
 
   def get_news
