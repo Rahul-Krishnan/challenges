@@ -1,1 +1,29 @@
 /* Your styling here */
+.jumbotron {
+  background-color: #F22FC3;
+  color: #F4D748;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  border-width: 5px;
+  border-color: black;
+}
+
+input[type=text] {
+  width: 70%;
+  background-color: #F4D748;
+  color: #A8A28E;
+}
+
+input[type=submit] {
+  float: right;
+  color: #F22FC3;
+  background-color: #12BFBC;
+  margin: -50px;
+  margin-right: 20px;
+}
+
+i {
+  float: right;
+  color: #A51181;
+}
