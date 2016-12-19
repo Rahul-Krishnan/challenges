@@ -1,16 +1,23 @@
 /* jshint esversion: 6 */
 import React from 'react';
-import data from '../constants/data';
+import Question from './question';
 
-const Questions = props => {
+const QuestionList = props => {
+  let questions = props.questions.props.data.map(questionData => {
+    const { id, question, answer } = questionData
+    return (
+      <Question
+        key={id}
+        question={question}
+        answer={answer}
+      />
+    );
+  });
   return (
-     <li>
-       {props.question}
-       <button type="button" className="close-button" onClick={props.handlePlusClick}>
-       <i className="fa fa-plus-square fa-lg" aria-hidden="true"></i>
-       </button>
-     </li>
-  )
-}
+    <ul>
+      {questions}
+    </ul>
+  );
+};
 
-export default Questions;
+export default QuestionList;

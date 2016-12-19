@@ -1,8 +1,29 @@
 /* jshint esversion: 6 */
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Questions from './questions';
+import QuestionList from './questions';
+import data from '../constants/data';
 
-const App = props => <div />;
-  debugger;
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      questions: {props},
+      answers: {props}
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>We are here to help</h1>
+        <QuestionList
+          questions={this.state.questions}
+        />
+      </div>
+    );
+  }
+}
+
+
 export default App;
