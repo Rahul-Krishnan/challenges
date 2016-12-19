@@ -20,7 +20,7 @@ let divElement = <div>
 
     <form id="form">
       <input type="text" defaultValue="Your email here"/>
-      <input type="submit" value="Claim your prize!"/>
+      <input type="submit" value="Claim your prize!" onSubmit={console.log("Form submitted!")}/>
     </form>
   </div>
 </div>
