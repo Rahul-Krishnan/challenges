@@ -1,11 +1,19 @@
 /* jshint esversion: 6 */
-import React from 'react';
+import React, {Component} from 'react';
 
-const Playlist = props => {
-  return(
-    <li className={this.props.className} onClick={this.props.handlePlaylistSelect}>
-      {this.props.name}
-    </li>
-  )
+class Playlist extends Component {
+  constructor(props) {
+    super(props);
+    this.state={
+
+    };
+  }
+  render() {
+    return(
+      <li className={this.props.className} onClick={this.props.handlePlaylistSelect}>
+        {this.props.name}
+      </li>
+    )
+  }
 }
 export default Playlist;
