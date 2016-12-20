@@ -4,7 +4,7 @@ import Question from './question';
 
 const QuestionList = props => {
   let questions = props.questions.props.data.map(questionData => {
-    const { id, question, answer } = questionData
+    const { id, question, answer } = questionData;
     return (
       <Question
         key={id}

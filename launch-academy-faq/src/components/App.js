@@ -8,15 +8,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      questions: {props},
-      answers: {props}
+      questions: {data},
+      answers: {data}
     };
   }
 
   render() {
+    let data = this.props.data;
     return (
       <div>
-        <h1>We are here to help</h1>
+        <h1>{"We're here to help"}</h1>
         <QuestionList
           questions={this.state.questions}
         />
