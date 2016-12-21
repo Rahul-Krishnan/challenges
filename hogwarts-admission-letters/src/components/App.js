@@ -53,7 +53,7 @@ class App extends Component {
           {"Sorc., Chf. Warlock, Supreme Mugwump,"}<br/>
           {"International Confed. of Wizards)"}</p>
           <div className="left">
-            <p>Dear {this.state.addressee}</p>
+            <p>Dear {this.state.addressee},</p>
 
             <Letter
               acceptance = {this.state.accepted}
