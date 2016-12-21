@@ -25,7 +25,7 @@ class Question extends Component{
     }
     return (
       <div>
-      <button onClick={this.handleClick}><i className="fa fa-plus-square fa-lg" aria-hidden="true"></i></button>
+      <button onClick={this.handleClick}><i className="fa fa-plus-square fa-lg" aria-hidden="true"></i>::::</button>
         <h3 id="eachQuestion">{this.props.question}</h3>
         {answer}
       </div>

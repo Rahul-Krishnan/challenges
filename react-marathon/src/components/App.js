@@ -21,7 +21,7 @@ class App extends React.Component {
 
   handlePlaylistSelect(id) {
     let newId = id;
-    let songId = this.props.data.playlists[newId-1].songs[0]
+    let songId = this.props.data.playlists[newId-1].songs[0];
     this.setState({
       selectedPlaylistId: newId,
       selectedSongId: songId
