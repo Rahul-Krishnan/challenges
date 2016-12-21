@@ -2,6 +2,7 @@
 import 'Game.js';
 
 describe('Game', () => {
+  let wrapper;
   // write non shallow (mount) tests here to test the Game Component with the
   // full DOM and don't forget to remove pending()
   beforeEach(() => {
@@ -11,7 +12,14 @@ describe('Game', () => {
   });
 
   it('should have the specified inital state', () => {
-    pending();
+    expect(wrapper.state()).toEqual({
+      table: {
+        row1: { cell1: '', cell2: '', cell3: '' },
+        row2: { cell1: '', cell2: '', cell3: '' },
+        row3: { cell1: '', cell2: '', cell3: '' }
+      },
+      turn: 'X'
+    });
   });
 
   it('should render an h3 (<h3>) with the title of the page', () => {
@@ -19,7 +27,7 @@ describe('Game', () => {
   });
 
   it('should render the GameTable', () => {
-    pending();
+    expect(wrapper.find('GameTable')).toBePresent();
   });
 
   it('should render an X when a cell is clicked during X\'s turn', () => {

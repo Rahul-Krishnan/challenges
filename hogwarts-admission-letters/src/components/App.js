@@ -27,27 +27,34 @@ class App extends Component {
 
   render(){
     return(
-      <div>
-        <form>
-          <h5>
-            Addressee
-          </h5>
-          <input type="text" id="input" placeholder="Harry Potter" className="columns small-6" onChange={this.handleNameChange}></input>
-          <div onClick={this.handleFlipSwitch}>Accepted | Rejected</div>
-        </form>
+      <div id="main-container">
+        <div>
+          <form className = "columns small-12 center">
+            <h5 className = "center">
+              Addressee
+            </h5>
+            <label className="inline">
+            <input type="text" id="input" placeholder="Harry Potter" className="columns small-4" onChange={this.handleNameChange}></input>
+            <div onClick={this.handleFlipSwitch}>Accepted | Rejected</div>
+            </label>
+          </form>
+        </div>
+        <div className="center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Hogwarts_coat_of_arms_colored_with_shading.svg/2000px-Hogwarts_coat_of_arms_colored_with_shading.svg.png" height="150" width="150" ></img>
+          <h1>{"HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY"}</h1>
+          <div className="left">
+            <p>{"Headmaster: Albus Dumbledore"}<br/>
+            {"(Order of Merlin, First Class, Grand"}<br/>
+            {"Sorc., Chf. Warlock, Supreme Mugwump,"}<br/>
+            {"International Confed. of Wizards)"}</p>
 
-        <h1>{"HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY"}</h1>
+            <p>Dear {this.addressee}</p>
 
-        <p>{"Headmaster: Albus Dumbledore"}<br/>
-        {"(Order of Merlin, First Class, Grand"}<br/>
-        {"Sorc., Chf. Warlock, Supreme Mugwump,"}<br/>
-        {"International Confed. of Wizards)"}</p>
-
-        <p>Dear {this.addressee}</p>
-
-        <Letter
-          acceptance = {this.state.accepted}
-        />
+            <Letter
+              acceptance = {this.state.accepted}
+            />
+          </div>
+        </div>
       </div>
     )
   }
