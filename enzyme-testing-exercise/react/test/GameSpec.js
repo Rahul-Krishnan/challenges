@@ -1,4 +1,5 @@
-import 'Game.js'
+/* jshint esversion: 6 */
+import 'Game.js';
 
 describe('Game', () => {
   // write non shallow (mount) tests here to test the Game Component with the
@@ -14,7 +15,7 @@ describe('Game', () => {
   });
 
   it('should render an h3 (<h3>) with the title of the page', () => {
-    pending();
+    expect(wrapper.find('h3').text()).toBe('Tic Tac Toe');
   });
 
   it('should render the GameTable', () => {

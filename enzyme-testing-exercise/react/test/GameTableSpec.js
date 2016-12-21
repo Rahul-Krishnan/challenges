@@ -1,10 +1,13 @@
-import 'GameTable.js'
+/* jshint esversion: 6 */
+import 'GameTable.js';
 
 describe('GameTable', () => {
+  let wrapper;
   // write (shallow) tests here for the GameTable stateless Component and don't
   // forget to remove pending()
   beforeEach(() => {
     jasmineEnzyme();
+    wrapper = shallow(<GameTable />);
     // add set up data as needed here
     // create a variable assigned to your shallow rendered component
   });

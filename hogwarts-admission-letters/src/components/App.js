@@ -20,8 +20,9 @@ class App extends Component {
   }
 
   handleNameChange(event) {
+    event.preventDefault();
     let newName = event.target.value;
-    this.setState({addressee: newName})
+    this.setState({addressee: newName});
   }
 
   render(){
@@ -32,7 +33,7 @@ class App extends Component {
             Addressee
           </h5>
           <input type="text" id="input" placeholder="Harry Potter" className="columns small-6" onChange={this.handleNameChange}></input>
-        <div onClick={this.handleFlipSwitch}>Accepted | Rejected</div>
+          <div onClick={this.handleFlipSwitch}>Accepted | Rejected</div>
         </form>
 
         <h1>{"HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY"}</h1>
