@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
     this.state = {
       accepted: false,
-      addressee: null
+      addressee: "Addressee"
     };
     this.handleFlipSwitch = this.handleFlipSwitch.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -20,8 +20,10 @@ class App extends Component {
   }
 
   handleNameChange(event) {
-    event.preventDefault();
     let newName = event.target.value;
+    if (newName === "") {
+      newName = "Addressee"
+    }
     this.setState({addressee: newName});
   }
 
@@ -29,26 +31,29 @@ class App extends Component {
     return(
       <div id="main-container">
         <div>
+
           <form className = "columns small-12 center">
-            <h5 className = "center">
+            <h4 className = "center">
               Addressee
-            </h5>
+            </h4>
             <label className="inline">
-            <input type="text" id="input" placeholder="Harry Potter" className="columns small-4" onChange={this.handleNameChange}></input>
-            <div onClick={this.handleFlipSwitch}>Accepted | Rejected</div>
+
+            <input type="text" id="input" placeholder="Harry Potter" className="columns small-4" onChange={this.handleNameChange} onSubmit={this.handleNameChange}></input>
+
+            <div id="flipSwitch" onClick={this.handleFlipSwitch}>Accepted | Rejected</div>
             </label>
           </form>
+
         </div>
         <div className="center">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Hogwarts_coat_of_arms_colored_with_shading.svg/2000px-Hogwarts_coat_of_arms_colored_with_shading.svg.png" height="150" width="150" ></img>
           <h1>{"HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY"}</h1>
+          <p><b>{"Headmaster: Albus Dumbledore"}</b><br/>
+          {"(Order of Merlin, First Class, Grand"}<br/>
+          {"Sorc., Chf. Warlock, Supreme Mugwump,"}<br/>
+          {"International Confed. of Wizards)"}</p>
           <div className="left">
-            <p>{"Headmaster: Albus Dumbledore"}<br/>
-            {"(Order of Merlin, First Class, Grand"}<br/>
-            {"Sorc., Chf. Warlock, Supreme Mugwump,"}<br/>
-            {"International Confed. of Wizards)"}</p>
-
-            <p>Dear {this.addressee}</p>
+            <p>Dear {this.state.addressee}</p>
 
             <Letter
               acceptance = {this.state.accepted}

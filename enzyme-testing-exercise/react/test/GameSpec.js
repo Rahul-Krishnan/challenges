@@ -1,11 +1,14 @@
 /* jshint esversion: 6 */
-import 'Game.js';
+import GameTable from '../src/GameTable.js';
+import RootComponent from '../src/Game.js';
 
 describe('Game', () => {
   let wrapper;
   // write non shallow (mount) tests here to test the Game Component with the
   // full DOM and don't forget to remove pending()
   beforeEach(() => {
+    // onClick = jasmine.createSpy('onClick spy');
+    wrapper = mount(<Game />);
     jasmineEnzyme();
     // add set up data as needed here
     // create a variable assigned to your full DOM rendered component

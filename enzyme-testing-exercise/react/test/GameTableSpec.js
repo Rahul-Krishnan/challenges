@@ -1,5 +1,6 @@
 /* jshint esversion: 6 */
-import 'GameTable.js';
+import GameTable from 'src/GameTable.js';
+import RootComponent from 'src/Game.js';
 
 describe('GameTable', () => {
   let table,
@@ -10,6 +11,7 @@ describe('GameTable', () => {
   // forget to remove pending()
   beforeEach(() => {
     jasmineEnzyme();
+    onClick = jasmine.createSpy('onClick spy');
     wrapper = shallow(
       <GameTable
         table = {
