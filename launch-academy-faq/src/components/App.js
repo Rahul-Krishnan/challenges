@@ -11,7 +11,7 @@ class App extends Component {
 
   render(){
     return(
-      <div>
+      <div id="main-container">
         <h1> {"We're here to help"} </h1>
         <QuestionList data={this.props.data}/>
       </div>

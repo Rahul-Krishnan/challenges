@@ -1,0 +1,15 @@
+What have we learned?
+
+React.js
+
+Components
+  stateful
+  stateless
+  props/state
+
+JSX
+
+
+[Enzyme
+Lifecycle
+  fetch] - not on test

@@ -7,27 +7,14 @@ class Question extends Component{
     this.state = {
       selected: false
     };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(event) {
-    event.preventDefault();
-    let opposite = !this.state.selected;
-    this.setState({selected: opposite});
   }
 
   render(){
-    let answer = '';
-    if (this.state.selected === true) {
-      answer = (
-        <p>{this.props.answer}</p>
-      )
-    }
     return (
       <div>
-      <button onClick={this.handleClick}><i className="fa fa-plus-square fa-lg" aria-hidden="true"></i>::::</button>
-        <h3 id="eachQuestion">{this.props.question}</h3>
-        {answer}
+      <button onClick={this.props.handleClick}><i className="fa fa-plus-square fa-lg" aria-hidden="true"></i>&emsp;</button>
+        <h4 className="eachQuestion">{this.props.question}</h4>
+        <p className={`eachAnswer ${this.props.className}`}>{this.props.answer}</p>
       </div>
     )
   }

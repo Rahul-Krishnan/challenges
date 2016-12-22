@@ -7,8 +7,33 @@ body {
 h1 {
   color: #37BECC;
   text-align: center;
+  font-weight: bolder;
+  padding: 20px;
+  font-size: 30px;
 }
 
-#eachQuestion {
+.eachQuestion {
   display: inline-block;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.eachAnswer {
+  display: block;
+  margin-left: 2rem;
+}
+
+.selected {
+
+}
+
+.hidden {
+  height: 0;
+  color: transparentize(white, 1);
+}
+
+#main-container {
+  padding: 10px;
+  margin: 10px;
+
 }

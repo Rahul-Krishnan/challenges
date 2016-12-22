@@ -3,7 +3,7 @@ const data = [
   {
     id: 1,
     question: 'What is Launch Academy?',
-    answer: 'Launch Academy is a 10-week, immersive bootcamp taking eager learners with little to no coding experience and giving them the tools to add value as a junior contributor to a software engineering team'
+    answer: 'Launch Academy is a 10-week, immersive bootcamp taking eager learners with little to no coding experience and giving them the tools to add value as a junior contributor to a software engineering team.'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const data = [
   {
     id: 4,
     question: 'What Languages do you teach? What will I learn?',
-    answer: 'We give you exposure to the full stack. You’ll learn Javascript, Ruby, HTML/CSS, and SQL. But learning the languages isn’t really that helpful unless you also know the frameworks in which to apply them. You’ll get experience applying the programming languages you learn in frameworks like Rails, Sinatra, Capybara, JQuery, and PostgreSQL'
+    answer: 'We give you exposure to the full stack. You’ll learn Javascript, Ruby, HTML/CSS, and SQL. But learning the languages isn’t really that helpful unless you also know the frameworks in which to apply them. You’ll get experience applying the programming languages you learn in frameworks like Rails, Sinatra, Capybara, JQuery, and PostgreSQL.'
   },
   {
     id: 5,
