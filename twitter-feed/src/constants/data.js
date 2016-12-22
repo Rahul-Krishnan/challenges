@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 const data = [
   {
     id_str: '725090047557558272',

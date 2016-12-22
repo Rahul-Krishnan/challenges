@@ -19,8 +19,8 @@ class TwitterFeed extends Component {
       let tweets = this.props.data.map(tweet => {
 
         let handleClick = () => {
-          this.handleTweetSelect(tweet.id_str)
-        }
+          this.handleTweetSelect(tweet.id_str);
+        };
         let className;
         if(tweet.id_str === this.state.selectedTweetId) {
           className="selected";

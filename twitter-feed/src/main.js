@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 import './main.scss';
 import 'babel-polyfill';
 import React from 'react';
