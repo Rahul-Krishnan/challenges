@@ -37,4 +37,4 @@ class PlaylistCollection extends Component {
     )
   }
 }
-export default PlaylistCollection
+export default PlaylistCollection;

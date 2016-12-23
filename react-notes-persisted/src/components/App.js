@@ -12,7 +12,9 @@ class App extends Component {
   componentDidMount() {
     let location = 'http://localhost:4567/folders/1/notes.json';
     console.log("mounted");
-    fetch(location)
+    fetch(location, {
+      method: 'get'
+    })
     .then(response => {
       if(response.ok) {
         return response;
