@@ -1,0 +1,56 @@
+body {
+   Use a "Matrix"-style color scheme.
+   background-color: black;
+   color: #00ff00;
+
+
+   font-family: monospace;
+   font-size: 1.5em;
+}
+
+ul {
+   Wrap the list in a green box.
+   width: 300px;
+   border: 1px solid #00ff00;
+}
+
+li {
+   Add a bit more spacing between list items.
+   padding: 5px;
+}
+
+#main-container {
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#title {
+  color: #0078A4;
+}
+
+.eachQuestion {
+  color: #0078A4;
+  font-weight: bold;
+}
+
+.eachAnswer {
+  color: white;
+  background-color: #339CC3;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+#correct {
+  color: #93C47D;
+}
+
+#incorrect {
+  color: #EA9999;
+}
+
+.selected {
+  background-color: white;
+}
