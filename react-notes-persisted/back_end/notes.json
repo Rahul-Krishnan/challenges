@@ -1,5 +1,10 @@
 {
   "notes": [
-
+    {
+      "id": 1,
+      "body": "first note in first folder",
+      "updated_at": "12/22/2016",
+      "folder_id": 1
+    }
   ]
 }
