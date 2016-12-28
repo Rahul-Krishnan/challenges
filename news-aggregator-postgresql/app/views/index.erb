@@ -1,1 +1,22 @@
 <!-- Put your News Aggregator articles.erb code here -->
+<h1>
+  The Best News on the Web
+</h1>
+
+<ul>
+  <p>Learning is fun.</p>
+  <% @article_array.each do |article_data| %>
+    <ul>
+      <a href= <%= article_data['url'] %> >
+        <%= article_data['title'] %>
+      </a>
+    </ul>
+    <ul>
+      <%= article_data['description'] %>
+    </ul>
+    <p> </p>
+  <% end %>
+</ul>
+
+<a href="/">Go Home</a>
+<a href="/articles/new">Add article</a>

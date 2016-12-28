@@ -2,10 +2,13 @@
 -- the table before re-creating it. Note that you'll lose any
 -- data if you drop and add a table:
 
--- DROP TABLE IF EXISTS articles;
+DROP TABLE IF EXISTS articles;
 
 -- Define your schema here:
 
--- CREATE TABLE articles (
---   <column definitions go here>
--- );
+CREATE TABLE articles (
+  id serial,
+  title varchar(255) NOT NULL,
+  url varchar(255) NOT NULL,
+  description varchar(255)
+);

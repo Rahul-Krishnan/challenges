@@ -1,1 +1,16 @@
 <!-- Put your News Aggregator new.erb code here -->
+<form action="/articles/new" method="post">
+  <label for="Title">Add title:</label>
+  <input type="text" id="Title", name="Title">
+
+  <label for="Url">Add URL:</label>
+  <input type="text" id="Url", name="Url">
+
+  <label for="Description">Add description:</label>
+  <input type="textarea", id="Description", name="Description">
+
+  <button type="Submit" id="Submit", name="Submit">Submit</button>
+</form>
+
+<a href="/articles">Go to articles</a>
+<a href="/">Go Home</a>
