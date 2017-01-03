@@ -3,9 +3,9 @@
 </h1>
 
 <ul>
-  <% @player_names.each do |position, name| %>
-    <li><%= name %></li>
+  <% @contacts.each do |contact| %>
+    <li><%= contact.phone_number %></li>
   <% end %>
 </ul>
 
-<a href="/teams">All teams</a>
+<a href="/">All names</a>
