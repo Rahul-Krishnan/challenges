@@ -3,7 +3,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: testing_ar_associations_development
-  pool: 5
+  pool: 20
   username:
   password:
 
@@ -12,7 +12,7 @@ test:
   adapter: postgresql
   encoding: unicode
   database: testing_ar_associations_test
-  pool: 5
+  pool: 20
   username:
   password:
 
@@ -21,6 +21,6 @@ production:
   adapter: postgresql
   encoding: unicode
   database: testing_ar_associations_production
-  pool: 5
+  pool: 20
   username:
   password:
