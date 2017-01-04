@@ -11,27 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170103181552) do
+ActiveRecord::Schema.define(version: 20170104173636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "meetings", force: :cascade do |t|
-    t.string   "mid",          null: false
+    t.string   "meeting_id",   null: false
     t.string   "meeting_name", null: false
     t.string   "description",  null: false
     t.string   "location",     null: false
-    t.string   "creator_name", null: false
-    t.string   "creator_id",   null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
-  add_index "meetings", ["mid", "creator_id"], name: "index_meetings_on_mid_and_creator_id", unique: true, using: :btree
+  add_index "meetings", ["meeting_id"], name: "index_meetings_on_meeting_id", unique: true, using: :btree
+
+  create_table "participants", force: :cascade do |t|
+    t.integer "meeting_id", null: false
+    t.integer "user_id",    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",   null: false
-    t.string   "uid",        null: false
+    t.string   "user_id",    null: false
     t.string   "username",   null: false
     t.string   "email",      null: false
     t.string   "avatar_url", null: false
@@ -39,6 +42,6 @@ ActiveRecord::Schema.define(version: 20170103181552) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
+  add_index "users", ["user_id", "provider"], name: "index_users_on_user_id_and_provider", unique: true, using: :btree
 
 end
