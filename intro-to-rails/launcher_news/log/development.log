@@ -1,0 +1,60 @@
+  [1m[36mSQL (12.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.4ms)[0m  DROP TABLE "articles"
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "articles" ("id" serial primary key, "title" character varying(255) NOT NULL, "url" text NOT NULL, "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130804031058')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mArticle Load (1.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."title" = 'Why does Ember.js rock?' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "articles" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-01-08 23:49:42.241887"], ["description", "Ember.js is a MVC (Model – View – Controller) JavaScript framework which is maintained by the Ember Core Team (including Tom Dale, Yehuda Katz, and others). It helps developers create ambitious single-page web applications that don't sacrifice what makes the web great: URI semantics, RESTful architecture, and the write-once, run-anywhere trio of HTML, CSS, and JavaScript."], ["title", "Why does Ember.js rock?"], ["updated_at", "2017-01-08 23:49:42.241887"], ["url", "https://kerricklong.com/articles/why-ember-js-rocks.html"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."title" = 'Mozilla Playdoh' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-01-08 23:49:42.249628"], ["description", "Mozilla's Playdoh is a web application template based on Django. Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Playdoh is simply a pre-configured Django project that adds some essential modules and middleware."], ["title", "Mozilla Playdoh"], ["updated_at", "2017-01-08 23:49:42.249628"], ["url", "http://playdoh.readthedocs.org/en/latest/"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."title" = 'Gigablast Search Engine, Now Open Source (C/C++)' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-01-08 23:49:42.252560"], ["description", "Gigablast is the first truly transparent search engine. It tells you exactly why the search results are ranked the way they are. There is nothing left to the imagination."], ["title", "Gigablast Search Engine, Now Open Source (C/C++)"], ["updated_at", "2017-01-08 23:49:42.252560"], ["url", "https://www.gigablast.com/"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."title" = 'Node.js Deployments with Docker, Dokku, & Digital Ocean' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "articles" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-01-08 23:49:42.257592"], ["description", "DigitalOcean is a really nice cloud hosting company that offers excellent performance at affordable rates. Docker is an abstraction on top of LXC Containers. Docker introduces a workflow that makes operating containers straightforward and lots of fun. If you want to learn more about docker I suggest you read this article. Dokku is a tiny program that allows you to easily deploy your applications. It was built by progrium (from localtunnel) on top of docker, Buildstep, gitreceive, pluginhook, nginx, Heroku BuildPacks,& sshcommand."], ["title", "Node.js Deployments with Docker, Dokku, & Digital Ocean"], ["updated_at", "2017-01-08 23:49:42.257592"], ["url", "https://medium.com/code-adventures/438bce155dcb"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."title" = 'Build a Blog Engine in Go' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-01-08 23:49:42.260684"], ["description", "A static blog generator in Go. It’s called trofaf because that’s its name. Get this: it takes markdown files, reads some YAML front matter, and generates good ol’ HTML files. I can already smell the Nobel. Anyway, the goal of this post is not to brag about the novelty of the thing, but to show how easy it is to get this done with Go’s rich standard library and some fine userland packages."], ["title", "Build a Blog Engine in Go"], ["updated_at", "2017-01-08 23:49:42.260684"], ["url", "http://0value.com/build-a-blog-engine-in-Go"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-08 18:50:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.8ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 4255ms (Views: 4237.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-01-08 18:51:41 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"hello", "url"=>"http://example.com", "description"=>"blarg!"}}
+Can't verify CSRF token authenticity
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2017-01-08 23:51:41.707397"], ["description", "blarg!"], ["title", "hello"], ["updated_at", "2017-01-08 23:51:41.707397"], ["url", "http://example.com"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost/articles/6
+Completed 302 Found in 12ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-08 18:52:24 -0500
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.5ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 112ms (Views: 111.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2017-01-08 18:54:33 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 105ms (Views: 101.3ms | ActiveRecord: 0.5ms)
