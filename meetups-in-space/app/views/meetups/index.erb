@@ -1,16 +1,12 @@
 <h1>Meetups</h1>
 
-<body>
-  <h1>Meetings List</h1>
+<ul>
+  <% @meetupobject.each do |meetup| %>
+  <li> <a href='/show'><%= meetup.name %> </a> </li>
+  <% end %>
+</ul>
 
-  <ul>
-    <% @meetup_objects[0].each do |meetup| %>
-      <li>
-        <a href="/show/<%= meetup["name"] %>">
-          <%= meetup["name"] %>
-        </a>
-      </li>
-    <% end %>
-  </ul>
 
-</body>
+
+<h4> <a href='/newmeetup'> Create New Meetup! </a> </h4>
+<!-- <li> <a href='/show'> hi </a> </li> -->

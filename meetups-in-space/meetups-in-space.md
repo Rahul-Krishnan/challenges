@@ -4,7 +4,7 @@ Why limit our market to just Earth?
 
 ## Introduction
 
-You'll be building a website similar to [Meetup.com][meetup] that allows users to sign up, join existing meetings, and even create their own meetup.
+You'll be building a website similar to [Meetup.com][meetup] that allows users to sign up, join existing meetups, and even create their own meetup.
 
 Meetups in Space is a little different from most of the challenges you have probably seen to date. It's focused on various aspects of ActiveRecord, and the end result will be a full-fledged, database-backed web application!
 

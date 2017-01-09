@@ -38,3 +38,19 @@ a:visited {
   padding: 1em;
   background-color: #3B9089;
 }
+
+.forming {
+  display: block;
+  float: left;
+  width: 120px;
+}
+
+.forming input[type=text] {
+  background-color: white;
+  color: black;
+}
+
+.button {
+  background-color: #4CAF50;
+  border-radius: 8px;
+}
