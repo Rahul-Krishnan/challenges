@@ -9,6 +9,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header><%= render "layouts/sidebar" %></header>
+    <%= render "layouts/flash" %>
+    <section id="main">
+      <%= yield %>
+    </section>
+    <footer><%= render "layouts/menu_list" %></footer>
   </body>
 </html>
