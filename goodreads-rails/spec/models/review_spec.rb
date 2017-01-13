@@ -10,7 +10,7 @@ describe Review do
   it { should_not have_valid(:rating).when("aaaaaaaaaaaaa") }
   it { should belong_to :book }
 
-  it "has a rating rating" do
+  it "has a review rating" do
     expect(roots_review.rating).to_not be_nil
   end
 
