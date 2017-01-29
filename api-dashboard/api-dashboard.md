@@ -60,7 +60,7 @@ $ rspec spec
 $ rackup
 ```
 
-Visit [http://localhost:9292/](http://localhost:9292/) to see your personal dashboard.
+Visit <http://localhost:9292/> to see your personal dashboard.
 
 
 ## API Keys

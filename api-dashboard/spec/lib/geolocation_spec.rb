@@ -18,7 +18,7 @@ RSpec.describe Geolocation, vcr: true do
 
     describe "#zip" do
       it "returns the zip code based on ip" do
-        expect(geolocation.zip).to eq("94035")
+        expect(geolocation.zip).to eq("94040")
       end
     end
 

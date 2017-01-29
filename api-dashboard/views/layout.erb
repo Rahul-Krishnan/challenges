@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/foundation.min.css" />
-    <link rel="stylesheet" href="/foundation-icons.css" />
-    <link rel="stylesheet" href="/app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css" />
+    <link rel="stylesheet" href="/app.css">
   </head>
+  <body>
 
   <body>
     <!-- nav bar -->
@@ -19,10 +20,9 @@
             <i class="fi-web"></i>
             Dashboard
           </li>
-          <li><a href="/">Home</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/weather">Weather</a></li>
-          <li><a href="/">Events</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Weather</a></li>
+          <li><a href="#">Events</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
@@ -39,9 +39,12 @@
     </div>
 
     <!-- javascript -->
-    <script src="/jquery.min.js"></script>
-    <script src="/what-input.min.js"></script>
-    <script src="/foundation.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/2.1.1/what-input.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
     <script src="/app.js"></script>
   </body>
 

@@ -18,10 +18,6 @@ class Geolocation
     @data["region_name"]
   end
 
-  def state_abbreviation
-    @data["region_code"]
-  end
-
   def country
     @data["country_name"]
   end
