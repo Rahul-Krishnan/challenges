@@ -1,40 +1,55 @@
-nouns = ["abcd", "c", "def", "h", "ij", "cde"]
-verbs = ["bc", "fg", "g", "hij", "bcd"]
-articles = ["a", "ac", "e"]
-
-words = nouns + verbs + articles
-
 # Rules:
 # sentence must have all valid words
 # sentence must have at least 1 verb
 # sentence have at least 1 noun or at least 2 articles
 
 # First make a list of all possible word combos
-# Then apply sentence structure rules
+# Then apply sentence structure rules to filter bad sentences out
 
 string1 = ["abcdefg"]
 string2 = ["abcd"]
 
-def compose_sentences(string)
-  grammar_check(find_all_word_combos(string))
+def compose_sentences(text)
+  nouns = ["abcd", "c", "def", "h", "ij", "cde"]
+  verbs = ["bc", "fg", "g", "hij", "bcd"]
+  articles = ["a", "ac", "e"]
+
+  dictionary = nouns + verbs + articles
+  all_sentences = find_all_word_combos(cleanup(text), dictionary)
+  binding.pry
+  grammar_check(all_sentences, nouns, verbs, articles)
 end
 
-def find_all_word_combos(string)
-  letters = string.split('')
-  length = letters.length
+def cleanup(text)
+  text.downcase.gsub(/\W+/, "")
+end
+
+def find_all_word_combos(string, dictionary)
   sentence_list = []
-  first_word = []
+  length = string.length
   length.times do |n|
-    if words.include?(letters[0..n])
-      find_all_word_combos(letters[(n+1)..(length-1)])
+    first_word = string[0..n]
+    if dictionary.include?(first_word)
+      sentence = ""
+      sentence += string.slice!(0..n) + " "
+      if string == ""
+        sentence_list << sentence
+      else
+        sub_sentence_list = find_all_word_combos(string, dictionary)
+        sub_sentence_list.each do |sub_sentence|
+          sub_sentence.prepend(sentence)
+        end
+        # binding.pry
+        sentence_list += sub_sentence_list
+      end
     end
   end
   sentence_list
 end
 
-def grammar_check(sentence_list)
+def grammar_check(sentence_list, nouns, verbs, articles)
   sentence_list.each do |sentence|
-    if verb_check(sentence) && (noun_check || article_check)
+    if word_check(sentence, verbs, 1) && (word_check(sentence, nouns, 1) || word_check(sentence, articles, 2))
     else
       sentence_list.delete(sentence)
     end
@@ -42,35 +57,14 @@ def grammar_check(sentence_list)
   sentence_list
 end
 
-def verb_check(sentence)
-  verb_count = 0
-  sentence.each do |word|
-    if verbs.include?(word)
-      verb_count += 1
+def word_check(sentence, word_array, min_count)
+  word_count = 0
+  words = sentence.split(" ")
+  words.each do |word|
+    if word_array.include?(word)
+      word_count += 1
     else
     end
   end
-  verb_count > 0
-end
-
-def noun_check(sentence)
-  noun_count = 0
-  sentence.each do |word|
-    if nouns.include?(word)
-      noun_count += 1
-    else
-    end
-  end
-  noun_count > 0
-end
-
-def article_check(sentence)
-  article_count = 0
-  sentence.each do |word|
-    if articles.include?(word)
-      article_count += 1
-    else
-    end
-  end
-  article_count > 1
+  word_count >= min_count
 end
