@@ -4,7 +4,7 @@
 # sentence have at least 1 noun or at least 2 articles
 #
 # Plan:
-# First make a list of all possible word combos
+# First make a list of all possible sentence word combos
 # Then apply sentence structure rules to filter bad sentences out
 
 def compose_sentences(text)
