@@ -40,6 +40,5 @@ def ways_to_climb(total_steps, ways_so_far=0)
         binding.pry
       end
     end
-  binding.pry
   ways_so_far
 end
