@@ -18,6 +18,7 @@ def ways_to_climb(total_steps)
       remaining_steps = total_steps - first_step
       total_ways += ways_to_climb(remaining_steps)
   end
+  total_ways
 end
 
 def ways_to_climb(total_steps, ways_so_far=0)
