@@ -3,3 +3,4 @@
 config/database.yml
 Gemfile.lock
 public/bundle.js
+node_modules
