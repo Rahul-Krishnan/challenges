@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   trackConsumption(submission) {
-    this.setState({ meals: this.state.meals.concat(submission) });
+    this.setState({ meals: this.state.meals.concat(submission) }
   }
 
   render() {
